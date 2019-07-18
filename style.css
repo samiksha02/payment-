@@ -1,0 +1,13 @@
+body {
+background : #f99d9d;
+text-align: center;
+background-image: url("coupon.jpg")
+}
+#main {
+width: 400px;
+height: 50px;
+background: #e4d2dc;
+margin: 25px auto;
+border: solid 2px #666666;
+
+}
