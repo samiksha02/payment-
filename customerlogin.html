@@ -117,7 +117,7 @@
 						<div class="hover">
 							<h4>New to our website?</h4>
 							<p>There are advances being made in science and technology everyday, and a good example of this is "BUY anytime from anywhere"</p>
-							<a class="primary-btn" href="registration.html">Create an Account</a>
+							
 						</div>
 					</div>
 				</div>
@@ -138,8 +138,74 @@
 								</div>
 							</div>
 							<div class="col-md-12 form-group">
-								<button type="submit" value="submit" class="primary-btn">Google Log In</button>
+					
+								<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/html/styles.cs">
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width">
+
+  <meta name="google-signin-client_id" content="121083550906-dg41jeidg670mk5sgognolvckml1udt8.apps.googleusercontent.com"><title>Easywallet</title>
+
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<script>
+
+  function onSignIn(googleUser)
+
+  {
+
+    let profile = googleUser.getBasicProfile();
+
+    alert('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+
+    alert('Name: ' + profile.getName());
+
+    alert('Image URL: ' + profile.getImageUrl());
+
+    alert('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+  }
+
+  function signOut() {
+
+    var auth2 = gapi.auth2.getAuthInstance();
+
+    auth2.signOut().then(function () {
+
+      console.log('User signed out.');
+
+    });
+
+  }
+
+</script>
+
+  </head>
+
+<body>
+
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<a href="#" onclick="signOut();">Sign out</a>
+
+</body>
+</html>
+
+</body>
+
+</html>
+
+</body>
+</html>
+
 								<button type="submit" value="submit" class="primary-btn">Facebook Log In</button>
+								<li class="nav-item"><a class="nav-link" href="Facebook.php">Facebook</a></li>
 								<a href="#">Forgot Password?</a>
 							</div>
 						</form>
@@ -147,6 +213,7 @@
 				</div>
 			</div>
 		</div>
+		
 	</section>
 	<!--================End Login Box Area =================-->
 

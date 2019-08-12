@@ -96,13 +96,13 @@ a {
                                             <option value="1">Pass Port</option>
                                             <option value="2">PPSN</option>
                                             <option value="4">Driving License</option>
-											 <option value="1">Gnib</option>
-                                            
+											 <option value="1">Gnib</option>                                            
                                         </select>
-										<form action="/action_page.php">
+										
+<P> <form action="/action_page.php">
   <input type="file" name="pic" accept="image/*">
-  <input type="submit">
-</form>
+  <input type="submit"> </p>
+</form> 
     <hr>
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
@@ -113,67 +113,3 @@ a {
     <p>Already have an account? <a href="#">Sign in</a>.</p>
   </div>
 </form>
-<!DOCTYPE html>
-
-<html>
-
-<head>
-<link rel="stylesheet" href="https://www.w3schools.com/html/styles.cs">
-
-  <meta charset="utf-8">
-
-  <meta name="viewport" content="width=device-width">
-
-  <meta name="google-signin-client_id" content="121083550906-dg41jeidg670mk5sgognolvckml1udt8.apps.googleusercontent.com"><title>Easywallet</title>
-
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-
-<script>
-
-  function onSignIn(googleUser)
-
-  {
-
-    let profile = googleUser.getBasicProfile();
-
-    alert('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-
-    alert('Name: ' + profile.getName());
-
-    alert('Image URL: ' + profile.getImageUrl());
-
-    alert('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-
-  }
-
-  function signOut() {
-
-    var auth2 = gapi.auth2.getAuthInstance();
-
-    auth2.signOut().then(function () {
-
-      console.log('User signed out.');
-
-    });
-
-  }
-
-</script>
-
-  </head>
-
-<body>
-
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
-<a href="#" onclick="signOut();">Sign out</a>
-
-</body>
-</html>
-
-</body>
-
-</html>
-
-</body>
-</html>
