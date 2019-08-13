@@ -14,6 +14,14 @@
   		<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
   		<!-- Style -->
   		<link href='style.css' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
   
   		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,23 +45,54 @@
   				</div>
   		
   				<!-- Collect the nav links, forms, and other content for toggling -->
-  				<div class="collapse navbar-collapse navbar-ex1-collapse">
-  					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Sign Up</a></li>  						
-						<li><a href="#">Home</a></li>
-  						<li><a href="#">About Us</a></li>
-						<li class="dropdown">
-  							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
-  							<ul class="dropdown-menu">
-  								<li><a href="#">Action</a></li>
-  								<li><a href="#">Another action</a></li>
-  								<li><a href="#">Something else here</a></li>
-  								<li><a href="#">Separated link</a></li>
-  							</ul>
-  						</li>
-  						<li><a href="#">Contact</a></li>
-  					</ul>
-  				</div><!-- /.navbar-collapse -->
+  				<header class="header_area sticky-header">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light main_box">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"><img src="img/wallet.jpg" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item submenu dropdown active">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Shop</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="category.html">coupons</a></li>
+									
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Customer</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="customerlogin.html">Customer login</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Mearchant</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="mearchantlogin.html">Mearchant Login</a></li>
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="help.html">help</a></li>
+						</ul>
+						
+					</div>
+				</div>
+			</nav>
+		</div>
+		
+	</header>
   			</div>
   		</nav>
 		
@@ -66,8 +105,8 @@
   						<h2>EASY WALLET</h2>
   						<p class="lead">Online wallet that allows you to make easy payments from across the world</p>
   						<ul class="list-inline">
-  							<li><a href="#" title="Customer Login" class="btn btn-md btn-info">CUSTOMER LOGIN</a></li>
-  							<li><a href="#" title="Merchant Login" class="btn btn-md btn-primary">MERCHANT LOGIN</a></li>
+  							<li><a href="customerlogin.html" title="Customer Login" class="btn btn-md btn-info">CUSTOMER LOGIN</a></li>
+  							<li><a href="mearchantlogin.html" title="Merchant Login" class="btn btn-md btn-primary">MERCHANT LOGIN</a></li>
   						</ul>
   					</div>
   				</div>
@@ -165,37 +204,7 @@
   		</div>
   		<!--/.section -->
 
-  		<!-- START SECTION -->
-  		<div class="section">
-  			<div class="container">
-  				<div class="row">
-  					<div class="col-md-12 text-center">
-  						<h2 class="section-title">Contact Us</h2>
-  						<p class="section-description">Please provide your details as requested.</p>
-  					</div>
-  					<div class="col-md-8 col-md-offset-2">
-  						<form id="contact" method="post" class="form" role="form">
-							<div class="row">
-								<div class="col-md-6 form-group">
-									<input class="form-control" id="name" name="name" placeholder="Name" type="text" required />
-								</div>
-								<div class="col-md-6 form-group">
-									<input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
-								</div>
-							</div>
-							<textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
-							<br />
-							<div class="row">
-								<div class="col-md-12 form-group">
-									<button class="btn btn-primary" type="submit">Submit</button>
-								</div>
-							</div>
-						</form>
-  					</div>
-  				</div><!--/.row-->
-  			</div><!--/.container-->
-  		</div>
-  		<!--/.section -->
+  		
 
   		
 
@@ -206,12 +215,14 @@
   					<div class="col-md-3">
   						<h3 class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">About Us</h3>
   						<p>DBS Project for Developing content for Cloud</p>
+						
+						
   					</div>
   					<div class="col-md-4 col-md-offset-1">
   						<h3 class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">TEAM</h3>
   						<address>
 							<strong>Amrita Sahu</strong><br>
-						 	<strong>Kaushal Shivare</strong><br>
+						 	<strong>Kaushal Shivhare</strong><br>
 							<strong>Samiksha Dhurvey</strong><br>
 						</address>
 						
