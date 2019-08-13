@@ -1,0 +1,72 @@
+
+ssh -i "DBS_web_dev_ubuntu.pem" ubuntu@ec2-34-254-137-153.eu-west-1.compute.amazonaws.com
+
+INSERT INTO students (studentName, email) values ("first
+student", "firststudent@mydbs.ie");
+INSERT INTO students (studentName, email) values ("second
+student", "secondstudent@mydbs.ie ");
+exit;
+
+CREATE TABLE DBS_PROJECT_WEBSITE_DEV.User_Details
+(
+  User_ID INT NOT NULL AUTO_INCREMENT,
+  User_Name VARCHAR(300) NOT NULL,
+  User_Phone_No INT NOT NULL,
+  User_Email VARCHAR(300) NOT NULL,
+  User_Identity_Proof VARCHAR(300) NOT NULL,
+  User_Address VARCHAR(600) NOT NULL,
+  User_Type VARCHAR(100) NOT NULL,
+  PRIMARY KEY (User_ID),
+  UNIQUE KEY unique_phno (User_Phone_No),
+  UNIQUE unique_email (User_Email),
+  UNIQUE unique_id (User_Identity_Proof)
+);
+
+INSERT INTO contacts(User_ID,User_Name,phone,email)
+VALUES('John','Doe','(408)-999-9765','john.doe@mysqltutorial.org');
+
+drop TABLE DBS_PROJECT_WEBSITE_DEV.Customer_Documents;
+
+CREATE TABLE DBS_PROJECT_WEBSITE_DEV.Customer_Documents
+(
+  Document_ID INT NOT NULL AUTO_INCREMENT,
+  Document_Name VARCHAR(300) NOT NULL,
+  Document_Description VARCHAR(600) NOT NULL,
+  User_Customer_ID INT NOT NULL,
+  PRIMARY KEY (Document_ID),
+  FOREIGN KEY (User_Customer_ID) REFERENCES User_Details(User_ID)
+);
+
+CREATE TABLE DBS_PROJECT_WEBSITE_DEV.Coupon_Code_Details
+(
+  Coupon_Code_ID INT NOT NULL AUTO_INCREMENT,
+  Coupon_Name VARCHAR(300) NOT NULL,
+  Coupon_Value_EURO INT NOT NULL,
+  User_Merchant_ID INT NOT NULL,
+  PRIMARY KEY (Coupon_Code_ID),
+  FOREIGN KEY (User_Merchant_ID) REFERENCES User_Details(User_ID)
+);
+
+CREATE TABLE DBS_PROJECT_WEBSITE_DEV.Customer_Top_up
+(
+  Top_Up_Transaction_ID INT NOT NULL AUTO_INCREMENT,  
+  Top_up_Amount_EURO INT NOT NULL,
+  User_Customer_ID INT NOT NULL,
+  PRIMARY KEY (Top_Up_Transaction_ID),
+  FOREIGN KEY (User_Customer_ID) REFERENCES User_Details(User_ID)
+);
+
+CREATE TABLE DBS_PROJECT_WEBSITE_DEV.Customer_Transaction_Details
+(
+  Transaction_ID INT NOT NULL AUTO_INCREMENT,  
+  Transaction_Type VARCHAR(300) NOT NULL,
+  Amount INT NOT NULL,
+  Transaction_Details VARCHAR(600) NOT NULL,
+  Customer_ID INT NOT NULL,
+  Coupon_Code_ID INT NOT NULL,
+  PRIMARY KEY (Transaction_ID),
+  FOREIGN KEY (Customer_ID) REFERENCES User_Details(User_ID),
+  FOREIGN KEY (Coupon_Code_ID) REFERENCES Coupon_Code_Details(Coupon_Code_ID)
+);
+
+----------------------------------------------------------------------------------------
